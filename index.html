@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Date El Gusto · Cocina Fresca | Bowls y ensaladas en Ciudad Vieja</title>
+<meta name="description" content="Date El Gusto Cocina Fresca: bowls, ensaladas, desayunos y licuados preparados cada mañana en Ciudad Vieja, Sacatepéquez, Guatemala. Envío gratis desde Q100.">
+<meta name="theme-color" content="#F7F3E6">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F7F3E6;
+  --surface: #FFFCF4;
+  --teal: #2F6F68;
+  --ink: #1D4040;
+  --ink-hover: #122B2B;
+  --peach: #F2C29A;
+  --tangerine: #EC9A57;
+  --white: #FFFFFF;
+  --error: #9A3A12; /* only for validation text/borders; 6.4:1 on cream */
+  --s1: .5rem; --s2: 1rem; --s3: 1.5rem; --s4: 2.5rem; --s5: 4rem; --s6: 6rem;
+  --gutter: max(16px, 8vw);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --font-script: "Courgette", "Merienda", cursive;
+  --font-sans: "Quicksand", "Comfortaa", system-ui, sans-serif;
+  --ease: cubic-bezier(.2, .7, .3, 1);
+  --header-h: 76px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 8px); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  overflow-x: clip;
+}
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul[role="list"] { list-style: none; padding: 0; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+.on-dark :focus-visible { outline-color: var(--white); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: var(--white); padding: .75rem 1rem; border-radius: var(--radius-sm); font-weight: 700; text-decoration: none; transition: top .2s var(--ease); }
+.skip-link:focus { top: 12px; }
+
+/* ---------- Type ---------- */
+.script { font-family: var(--font-script); font-weight: 400; line-height: 1.1; letter-spacing: .005em; }
+.tagline { font-weight: 500; line-height: 1.25; }
+.section-head { position: relative; z-index: 1; margin-bottom: var(--s4); }
+.section-head h2 { font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem); }
+.section-head .tagline { font-size: clamp(1.15rem, .95rem + .9vw, 1.6rem); margin-top: .25rem; }
+.section-head--center { text-align: center; }
+.prose { max-width: 34rem; }
+.prose p + p { margin-top: var(--s2); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 48px; padding: .7rem 1.5rem;
+  border: 2px solid var(--ink); border-radius: var(--radius-sm);
+  font-weight: 700; font-size: 1.0625rem; line-height: 1.2; text-decoration: none; cursor: pointer;
+  transition: transform .2s var(--ease), background-color .2s var(--ease), box-shadow .2s var(--ease), color .2s var(--ease);
+}
+.btn--primary { background: var(--ink); color: var(--white); }
+.btn--primary:hover { background: var(--ink-hover); border-color: var(--ink-hover); transform: translateY(-2px); box-shadow: 0 6px 14px -8px rgba(29,64,64,.6); }
+.btn--secondary { background: transparent; color: var(--ink); }
+.btn--secondary:hover { background: var(--ink); color: var(--white); transform: translateY(-2px); }
+.btn--light { background: var(--cream); border-color: var(--cream); color: var(--ink); }
+.btn--light:hover { background: var(--white); border-color: var(--white); transform: translateY(-2px); }
+.btn--sm { min-height: 44px; padding: .5rem 1rem; font-size: .95rem; }
+.btn:active { transform: translateY(0); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.link-arrow { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.link-arrow svg { width: 18px; height: 18px; transition: transform .2s var(--ease); }
+.link-arrow:hover svg { transform: translateX(3px); }
+
+/* ---------- Decorations ---------- */
+.deco { position: absolute; pointer-events: none; z-index: 0; }
+.doodle { width: 96px; height: 96px; }
+.blob { color: var(--peach); }
+.blob--teal { color: var(--teal); }
+@media (prefers-reduced-motion: no-preference) {
+  .float { animation: float 6s ease-in-out infinite; }
+  .float--slow { animation-duration: 8s; animation-delay: -2s; }
+  @keyframes float { 0%, 100% { translate: 0 0; rotate: 0deg; } 50% { translate: 0 -8px; rotate: 3deg; } }
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  transition: background-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.site-header.is-scrolled { background: rgba(247,243,230,.96); box-shadow: 0 1px 0 rgba(29,64,64,.14); }
+.header-inner {
+  display: flex; align-items: center; gap: var(--s2);
+  min-height: var(--header-h); padding: .5rem var(--gutter) .5rem 0;
+}
+.brand {
+  position: relative; display: flex; flex-direction: column; justify-content: center;
+  min-height: 64px; padding: .25rem 2.25rem .35rem var(--gutter);
+  color: var(--white); text-decoration: none; isolation: isolate; flex: none;
+}
+.brand__blob { position: absolute; inset: -14px -6px -10px 0; width: calc(100% + 6px); height: calc(100% + 24px); z-index: -1; color: var(--teal); }
+.brand__name { font-family: var(--font-script); font-size: 1.6rem; line-height: 1; }
+.brand__tag { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: lowercase; }
+.main-nav { margin-left: auto; }
+.nav-list { display: flex; align-items: center; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+.nav-list a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: .4rem 1rem;
+  border-radius: 999px; font-weight: 600; text-decoration: none;
+  transition: background-color .2s var(--ease), color .2s var(--ease);
+}
+.nav-list a:hover { background: rgba(47,111,104,.12); }
+.nav-list a[aria-current="true"] { background: var(--teal); color: var(--white); }
+.nav-toggle { display: none; }
+.header-cta { flex: none; }
+
+@media (max-width: 899px) {
+  :root { --header-h: 68px; }
+  .site-header { background: rgba(247,243,230,.96); }
+  .header-inner { padding-right: 16px; gap: .5rem; }
+  .brand { min-height: 56px; padding-right: 1.6rem; padding-left: 16px; }
+  .brand__name { font-size: 1.4rem; }
+  .brand__tag { font-size: .68rem; }
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+    min-width: 44px; min-height: 44px; padding: .4rem .6rem;
+    background: transparent; border: 2px solid var(--ink); border-radius: var(--radius-sm); cursor: pointer; font-weight: 700; font-size: .9rem;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+  .nav-toggle .icon-close { display: none; }
+  .nav-toggle[aria-expanded="true"] .icon-open { display: none; }
+  .nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+  .nav-list {
+    position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    padding: .5rem 16px 1rem; background: var(--cream);
+    box-shadow: 0 12px 20px -14px rgba(29,64,64,.5); border-top: 1px solid rgba(29,64,64,.14);
+  }
+  .js .nav-list:not(.is-open) { display: none; }
+  .nav-list a { width: 100%; min-height: 48px; border-radius: var(--radius-sm); font-size: 1.1rem; }
+  .header-cta { padding-inline: .8rem; font-size: .9rem; }
+}
+@media (max-width: 479px) {
+  .brand { padding-right: 1.2rem; }
+  .brand__name { font-size: 1.15rem; }
+  .header-cta { padding-inline: .7rem; font-size: .85rem; }
+}
+@media (max-width: 379px) {
+  .nav-toggle .toggle-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: clip;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  min-height: clamp(560px, calc(100vh - var(--header-h)), 820px);
+}
+.hero__text { position: relative; z-index: 2; align-self: center; padding: var(--s5) 0 var(--s6) var(--gutter); }
+.hero h1 { font-size: clamp(2.9rem, 1.4rem + 4.6vw, 5.6rem); white-space: nowrap; }
+.hero .tagline { font-size: clamp(1.45rem, .9rem + 1.9vw, 2.75rem); margin-top: .25rem; }
+.hero .lead { max-width: 30rem; margin-top: var(--s4); font-size: 1.125rem; }
+.hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); margin-top: var(--s4); }
+.hero__meta { display: flex; align-items: center; gap: .5rem; font-size: .95rem; font-weight: 600; }
+.hero__meta svg { width: 20px; height: 20px; color: var(--teal); }
+.hero__media { position: relative; min-height: 100%; }
+.hero__blob { position: absolute; top: -8%; right: -6%; width: 104%; height: 116%; color: var(--peach); }
+.hero__photo {
+  position: absolute; right: -12%; bottom: -9%;
+  width: min(40vw, 600px); aspect-ratio: 1; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 18px 40px -24px rgba(29,64,64,.55);
+}
+.hero__bowl {
+  position: absolute; right: -3%; top: -9%;
+  width: min(19vw, 270px); aspect-ratio: 1; border-radius: 50%; object-fit: cover;
+  border: 8px solid var(--cream); z-index: 1;
+}
+.badge {
+  display: grid; place-content: center; text-align: center;
+  width: 132px; aspect-ratio: 1; border-radius: 50%;
+  background: var(--tangerine); color: var(--ink);
+  font-weight: 700; font-size: 1.3rem; line-height: 1.1;
+}
+.badge--teal { background: var(--teal); color: var(--white); }
+.hero .badge { position: absolute; z-index: 3; left: 12%; bottom: 8%; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .badge.pop { scale: .6; rotate: -14deg; opacity: 0; transition: scale .3s var(--ease), rotate .3s var(--ease), opacity .3s var(--ease); }
+  .js .badge.pop.is-visible { scale: 1; rotate: -6deg; opacity: 1; }
+}
+.d-hero-egg { top: 14%; left: 10%; width: 150px; height: 150px; }
+.d-hero-tomato { top: 50%; left: 2%; width: 104px; height: 104px; }
+.d-hero-cupcake { top: 4%; right: 44%; width: 96px; height: 96px; }
+.d-hero-leaf { left: -26px; top: 46%; width: 70px; height: 90px; rotate: 30deg; }
+.d-hero-mitt { left: calc(var(--gutter) + 15rem); bottom: 3%; width: 120px; height: 120px; rotate: -12deg; }
+.d-hero-dash { left: var(--gutter); bottom: 4%; width: 110px; height: 70px; }
+@media (max-width: 1199px) { .d-hero-mitt { display: none; } }
+
+@media (max-width: 899px) {
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero__text { padding: var(--s4) 16px var(--s3); text-align: left; }
+  .hero h1 { white-space: normal; }
+  .hero__media { min-height: 0; height: clamp(340px, 92vw, 560px); }
+  .hero__blob { top: 6%; right: -20%; width: 120%; height: 100%; }
+  .hero__photo { width: min(78vw, 460px); right: -12%; bottom: 3%; }
+  .hero__bowl { width: min(30vw, 170px); top: -2%; right: auto; left: 4%; border-width: 6px; }
+  .hero .badge { left: 6%; bottom: 10%; width: 112px; font-size: 1.1rem; }
+  .d-hero-egg, .d-hero-mitt, .d-hero-leaf, .d-hero-dash { display: none; }
+  .d-hero-cupcake { top: -2%; right: 4%; width: 60px; height: 60px; z-index: 2; }
+  .d-hero-tomato { top: 38%; left: 5%; width: 60px; height: 60px; }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .hero__text { padding-inline: var(--gutter); }
+}
+
+/* ---------- Generic section ---------- */
+.section { position: relative; overflow: clip; padding: var(--s6) var(--gutter); }
+.container { position: relative; z-index: 1; max-width: 1180px; margin-inline: auto; }
+
+/* ---------- Delivery band ---------- */
+.delivery { padding: var(--s4) var(--gutter) 0; }
+.delivery__card {
+  position: relative; overflow: clip; max-width: 1180px; margin-inline: auto;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--s3) var(--s4);
+  padding: var(--s4) var(--s5);
+  background: var(--teal); color: var(--white);
+  border-radius: 64px 28px 72px 24px / 40px 64px 30px 56px;
+}
+.delivery .badge { width: 120px; font-size: 1.15rem; }
+.delivery h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); font-weight: 700; line-height: 1.2; }
+.delivery p { margin-top: .35rem; max-width: 38rem; }
+.delivery__dash { right: 26%; top: -6px; width: 80px; height: 50px; color: var(--white); opacity: .35; }
+@media (max-width: 1023px) {
+  .delivery__card { grid-template-columns: auto minmax(0, 1fr); padding: var(--s4); }
+  .delivery__card .btn { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 767px) {
+  .delivery { padding-inline: 16px; }
+  .delivery__card { grid-template-columns: 1fr; justify-items: start; padding: var(--s4) var(--s3); }
+  .delivery__card .btn { grid-column: auto; }
+  .delivery__card .btn { width: 100%; }
+  .delivery .badge { width: 104px; font-size: 1rem; }
+}
+
+/* ---------- Menu ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: var(--s4); }
+.filter {
+  min-height: 44px; padding: .45rem 1.1rem; border-radius: 999px;
+  border: 2px solid var(--ink); background: transparent; font-weight: 700; cursor: pointer;
+  transition: background-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+}
+.filter:hover { transform: translateY(-1px); background: rgba(47,111,104,.12); }
+.filter[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--white); }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: var(--s4) var(--s3); }
+.dish { position: relative; display: flex; flex-direction: column; text-align: center; padding: 0 var(--s1); }
+.dish[hidden] { display: none; }
+.dish__img-wrap { position: relative; width: 78%; max-width: 230px; margin: 0 auto var(--s3); }
+.dish__img-wrap::before { content: ""; position: absolute; inset: 6% -6% -6% 6%; border-radius: 50%; background: var(--peach); z-index: -1; }
+.dish:nth-child(even) .dish__img-wrap::before { inset: -6% 6% 6% -6%; background: rgba(47,111,104,.22); }
+.dish__img-wrap { isolation: isolate; }
+.dish img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; transition: transform .3s var(--ease); }
+.dish:hover img { transform: rotate(-4deg) scale(1.02); }
+.dish h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.25; }
+.dish p { margin-top: .35rem; font-size: .98rem; }
+.dish__foot { display: flex; align-items: center; justify-content: center; gap: .75rem; margin-top: auto; padding-top: var(--s2); }
+.price { font-weight: 700; font-size: 1.2rem; color: var(--teal); }
+.tag { display: inline-block; padding: .1rem .6rem; border: 1.5px solid var(--ink); border-radius: 999px; font-size: .8rem; font-weight: 700; }
+.menu-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--s2) var(--s3); margin-top: var(--s5); text-align: center; }
+.menu__blob { width: 520px; height: 520px; right: -200px; top: 120px; }
+.menu__blob2 { width: 380px; height: 380px; left: -220px; bottom: 40px; }
+.d-menu-citrus { right: var(--gutter); top: 64px; width: 110px; height: 110px; }
+.d-menu-avocado { left: 2%; top: 46%; width: 90px; height: 100px; rotate: -18deg; }
+.d-menu-dash { right: 4%; bottom: 80px; width: 100px; height: 64px; }
+@media (max-width: 1279px) { .d-menu-avocado { display: none; } }
+@media (max-width: 767px) {
+  .d-menu-citrus { top: 40px; right: -20px; width: 84px; height: 84px; }
+}
+
+/* ---------- Split (about / final) ---------- */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s5); align-items: center; }
+.split__media { position: relative; isolation: isolate; }
+.split__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 46% 54% 42% 58% / 52% 40% 60% 48%; }
+.split__media .blob { position: absolute; z-index: -1; }
+.about .split__media .blob { width: 120%; height: 120%; left: -26%; top: -8%; }
+.features { display: grid; gap: var(--s2); margin-top: var(--s4); }
+.feature { display: grid; grid-template-columns: 48px 1fr; gap: var(--s2); align-items: start; }
+.feature__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--peach); }
+.feature__icon svg { width: 24px; height: 24px; }
+.feature strong { display: block; font-weight: 700; }
+.d-about-pin { left: 3%; top: 8px; width: 160px; height: 90px; rotate: -16deg; }
+.d-about-leaf { right: 6%; bottom: 40px; width: 70px; height: 92px; rotate: 24deg; }
+.d-about-dash { left: 3%; bottom: 60px; width: 90px; height: 60px; }
+@media (max-width: 899px) {
+  .split { grid-template-columns: 1fr; gap: var(--s4); }
+  .split__media { max-width: 460px; width: 88%; margin-inline: auto; }
+  .d-about-pin { top: 12px; left: -20px; width: 120px; height: 70px; }
+  .d-about-leaf, .d-about-dash { display: none; }
+}
+
+/* ---------- Products ---------- */
+.products { padding-top: var(--s5); }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); }
+.product { display: flex; flex-direction: column; background: var(--surface); border-radius: var(--radius-md); overflow: hidden; border: 1.5px solid rgba(29,64,64,.14); transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.product:hover { transform: translateY(-4px); box-shadow: 0 16px 28px -22px rgba(29,64,64,.6); }
+.product img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.product__body { display: flex; flex-direction: column; flex: 1; padding: var(--s2) var(--s3) var(--s3); }
+.product h3 { font-size: 1.15rem; font-weight: 700; line-height: 1.25; }
+.product p { margin-top: .3rem; font-size: .96rem; }
+.product .price { margin-top: auto; padding-top: var(--s2); }
+.products__blob { width: min(1200px, 110%); height: 560px; left: 50%; top: 52%; translate: -50% -50%; }
+.d-prod-egg { right: 3%; top: 40px; width: 104px; height: 104px; }
+.d-prod-mitt { left: 1%; top: 30px; width: 96px; height: 96px; rotate: 14deg; }
+@media (max-width: 1099px) { .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .d-prod-mitt { display: none; } .d-prod-egg { right: -16px; top: 24px; width: 80px; height: 80px; } }
+@media (max-width: 479px) { .product-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Gallery ---------- */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 220px; grid-auto-flow: dense; gap: var(--s2); }
+.gallery-grid figure { position: relative; overflow: hidden; border-radius: var(--radius-md); }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease); }
+.gallery-grid figure:hover img { transform: scale(1.04); }
+.g-tall { grid-row: span 2; }
+.g-wide { grid-column: span 2; }
+.d-gal-tomato { left: 3%; top: 4px; width: 78px; height: 78px; }
+.d-gal-dash { right: 6%; top: 24px; width: 100px; height: 64px; }
+.gallery__blob { width: 420px; height: 420px; right: -180px; bottom: -120px; }
+@media (max-width: 767px) {
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 160px; gap: .75rem; }
+  .d-gal-tomato { display: none; }
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials { background: linear-gradient(var(--cream), var(--cream)); }
+.carousel { position: relative; }
+.carousel__track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2 * var(--s3)) / 3);
+  gap: var(--s3); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  padding: .5rem .25rem 1rem; margin: 0; list-style: none; scrollbar-width: none;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { .carousel__track { scroll-behavior: auto; } }
+.quote {
+  scroll-snap-align: start; display: flex; flex-direction: column; gap: var(--s2);
+  padding: var(--s4) var(--s3) var(--s3); background: var(--surface); border-radius: var(--radius-md);
+  border: 1.5px solid rgba(29,64,64,.14);
+}
+.quote__mark { width: 40px; height: 32px; color: var(--teal); }
+.quote blockquote { margin: 0; font-size: 1.05rem; }
+.quote figcaption { margin-top: auto; display: flex; align-items: center; gap: .75rem; }
+.avatar { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--peach); font-weight: 700; flex: none; }
+.quote:nth-child(even) .avatar { background: var(--teal); color: var(--white); }
+.quote cite { font-style: normal; font-weight: 700; display: block; }
+.quote small { font-size: .9rem; }
+.stars { display: flex; gap: 2px; color: var(--teal); }
+.stars svg { width: 18px; height: 18px; }
+.carousel__controls { display: flex; justify-content: flex-end; gap: .75rem; margin-top: var(--s2); }
+.carousel__btn {
+  display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+  border: 2px solid var(--ink); background: transparent; cursor: pointer;
+  transition: background-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+}
+.carousel__btn:hover:not(:disabled) { background: var(--ink); color: var(--white); transform: translateY(-2px); }
+.carousel__btn:disabled { opacity: .4; cursor: default; }
+.carousel__btn svg { width: 22px; height: 22px; }
+.d-test-cupcake { left: 2%; top: 50px; width: 96px; height: 96px; }
+.testimonials__blob { width: 360px; height: 360px; left: -170px; bottom: -90px; }
+@media (max-width: 1023px) { .carousel__track { grid-auto-columns: calc((100% - var(--s3)) / 2); } }
+@media (max-width: 639px) { .carousel__track { grid-auto-columns: 88%; } .d-test-cupcake { display: none; } }
+
+/* ---------- Contact / reservations ---------- */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+.form-card { background: var(--surface); border-radius: var(--radius-md); padding: var(--s4); border: 1.5px solid rgba(29,64,64,.14); }
+.form-card h3 { font-size: 1.35rem; font-weight: 700; }
+.form-card > p { margin-top: .25rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s2); margin-top: var(--s3); }
+.field { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+.field--full { grid-column: 1 / -1; }
+.field label { font-weight: 700; }
+.field .opt { font-weight: 500; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 48px; padding: .6rem .8rem;
+  background: var(--white); border: 1.5px solid var(--ink); border-radius: var(--radius-sm);
+  transition: border-color .15s var(--ease), box-shadow .15s var(--ease);
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--cream), 0 0 0 6px var(--teal); }
+.field [aria-invalid="true"] { border-color: var(--error); border-width: 2px; }
+.error { display: flex; align-items: flex-start; gap: .35rem; color: var(--error); font-size: .92rem; font-weight: 700; }
+.error:empty { display: none; }
+.error svg { width: 18px; height: 18px; flex: none; margin-top: .1rem; }
+.hint { font-size: .9rem; }
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); margin-top: var(--s3); }
+.form-success {
+  display: flex; gap: var(--s2); align-items: flex-start; margin-top: var(--s3);
+  padding: var(--s2) var(--s3); background: var(--teal); color: var(--white); border-radius: var(--radius-sm);
+}
+.form-success[hidden] { display: none; }
+.form-success svg { width: 28px; height: 28px; flex: none; }
+.form-success strong { display: block; font-size: 1.1rem; }
+.info { display: grid; gap: var(--s3); }
+.info-item { display: grid; grid-template-columns: 48px 1fr; gap: var(--s2); }
+.info-item h3 { font-size: 1.1rem; font-weight: 700; }
+.info-item a { font-weight: 700; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 44px; }
+.hours { display: grid; grid-template-columns: auto auto; justify-content: start; gap: .15rem 1.25rem; margin-top: .25rem; }
+.hours dt { font-weight: 700; }
+.hours dd { white-space: nowrap; }
+.map { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1.5px solid rgba(29,64,64,.14); }
+.map svg { width: 100%; height: auto; }
+.map__link { position: absolute; left: 12px; bottom: 12px; }
+.d-contact-avocado { right: 2%; top: 60px; width: 84px; height: 96px; rotate: 16deg; }
+@media (max-width: 1099px) { .contact-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--s4); } }
+.contact__blob { width: 460px; height: 460px; left: -200px; top: 30%; }
+@media (max-width: 899px) {
+  .contact-grid { grid-template-columns: 1fr; gap: var(--s4); }
+  .d-contact-avocado { top: 30px; right: -18px; width: 70px; height: 80px; }
+}
+@media (max-width: 539px) {
+  .form-card { padding: var(--s3) var(--s2); }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-actions .btn { width: 100%; }
+}
+
+/* ---------- Final CTA ---------- */
+.final .split { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+.final .split__media img { aspect-ratio: 1; border-radius: 50%; }
+.final .split__media .blob { width: 118%; height: 118%; left: -6%; top: -12%; }
+.final .badge { position: absolute; right: 2%; bottom: 6%; }
+.final h2 { font-size: clamp(2.5rem, 1.6rem + 3.4vw, 4.5rem); }
+.final .tagline { font-size: clamp(1.25rem, 1rem + 1vw, 1.9rem); margin-top: .25rem; }
+.final p.lead { margin-top: var(--s3); max-width: 30rem; }
+.final .hero__actions { margin-top: var(--s4); }
+.d-final-citrus { right: 4%; top: 40px; width: 100px; height: 100px; }
+.d-final-dash { right: 10%; bottom: 50px; width: 100px; height: 64px; }
+@media (max-width: 899px) {
+  .final .split { grid-template-columns: 1fr; }
+  .final .split__media { order: 2; width: 80%; }
+  .final .badge { width: 104px; font-size: 1rem; right: -4%; }
+  .d-final-citrus { top: 10px; right: -24px; width: 80px; height: 80px; }
+  .d-final-dash { display: none; }
+}
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink); color: var(--white); padding: var(--s5) var(--gutter) var(--s3); position: relative; overflow: clip; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1.2fr; gap: var(--s4); max-width: 1180px; margin-inline: auto; position: relative; z-index: 1; }
+.site-footer h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: var(--s2); }
+.footer-brand .brand__name { font-size: 2rem; }
+.footer-brand p { margin-top: var(--s2); max-width: 22rem; }
+.footer-links { list-style: none; margin: 0; padding: 0; }
+.footer-links a { display: inline-flex; align-items: center; min-height: 40px; text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.site-footer address { font-style: normal; }
+.site-footer address a { display: inline-flex; min-height: 40px; align-items: center; font-weight: 700; }
+.social { display: flex; gap: .5rem; margin-top: var(--s2); }
+.social a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); transition: background-color .2s var(--ease), color .2s var(--ease); }
+.social a:hover { background: var(--white); color: var(--ink); }
+.social svg { width: 20px; height: 20px; }
+.footer-bottom { max-width: 1180px; margin: var(--s4) auto 0; padding-top: var(--s3); border-top: 1px solid rgba(255,255,255,.2); font-size: .9rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s2); position: relative; z-index: 1; }
+.footer__blob { width: 300px; height: 300px; right: -120px; top: -120px; color: var(--teal); opacity: .6; }
+@media (max-width: 1023px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 539px) { .footer-grid { grid-template-columns: 1fr; gap: var(--s3); } }
+
+/* ---------- Reveal ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal { opacity: 0; translate: 0 18px; transition: opacity .3s var(--ease), translate .3s var(--ease); }
+  .js .reveal.is-visible { opacity: 1; translate: 0 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Doodle + icon sprite: decorative, hidden from assistive tech -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="d-egg" viewBox="0 0 100 100">
+      <circle cx="54" cy="52" r="15" fill="#EC9A57"/>
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30 18C45 6 70 12 78 28C90 34 93 55 82 66C78 84 58 92 44 86C26 90 11 76 16 60C6 48 14 26 30 18Z"/>
+        <circle cx="49" cy="48" r="14"/>
+        <path d="M44 41l1 2M56 52l1 2M24 64l2 1M70 26l1 2M74 72l-1 2M30 34l2-1"/>
+      </g>
+    </symbol>
+    <symbol id="d-tomato" viewBox="0 0 100 100">
+      <circle cx="56" cy="64" r="22" fill="#EC9A57"/>
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 30C72 28 86 44 84 62C82 80 66 90 50 90C32 90 16 78 16 60C16 42 30 31 50 30Z"/>
+        <path d="M50 32L46 18M50 32C42 25 33 27 28 31C36 35 44 35 50 32ZM50 32C57 24 66 23 72 27C66 33 57 35 50 32ZM50 32C54 38 56 42 54 46C49 42 48 37 50 32Z"/>
+        <path d="M28 56c1-6 4-10 9-13M30 66l1 2M66 74l1 2M72 52l1 2"/>
+      </g>
+    </symbol>
+    <symbol id="d-citrus" viewBox="0 0 100 100">
+      <circle cx="56" cy="56" r="30" fill="#EC9A57"/>
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="50" cy="50" r="38"/>
+        <circle cx="50" cy="50" r="31"/>
+        <path d="M50 48C44 38 45 28 50 22C55 28 56 38 50 48Z"/>
+        <path d="M50 48C44 38 45 28 50 22C55 28 56 38 50 48Z" transform="rotate(60 50 50)"/>
+        <path d="M50 48C44 38 45 28 50 22C55 28 56 38 50 48Z" transform="rotate(120 50 50)"/>
+        <path d="M50 48C44 38 45 28 50 22C55 28 56 38 50 48Z" transform="rotate(180 50 50)"/>
+        <path d="M50 48C44 38 45 28 50 22C55 28 56 38 50 48Z" transform="rotate(240 50 50)"/>
+        <path d="M50 48C44 38 45 28 50 22C55 28 56 38 50 48Z" transform="rotate(300 50 50)"/>
+        <path d="M22 30l2 2M80 66l-2 1M74 22l-1 2"/>
+      </g>
+    </symbol>
+    <symbol id="d-leaf" viewBox="0 0 80 100">
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M40 94C12 72 10 32 40 6C70 32 68 72 40 94Z"/>
+        <path d="M40 98V14M40 30L28 21M40 30L52 21M40 46L24 35M40 46L56 35M40 62L24 51M40 62L56 51M40 78L29 69M40 78L51 69"/>
+      </g>
+    </symbol>
+    <symbol id="d-cupcake" viewBox="0 0 100 100">
+      <circle cx="56" cy="23" r="7" fill="#EC9A57"/>
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M28 56L36 90H64L72 56Z"/>
+        <path d="M40 58L44 90M50 58V90M60 58L56 90"/>
+        <path d="M24 56C17 46 27 36 36 40C36 28 48 24 54 31C62 23 77 32 70 42C82 45 80 58 72 56Z"/>
+        <circle cx="52" cy="22" r="6"/>
+        <path d="M54 16C56 10 61 7 67 7M36 48l2 1M58 44l2-1"/>
+      </g>
+    </symbol>
+    <symbol id="d-mitt" viewBox="0 0 100 100">
+      <circle cx="56" cy="46" r="13" fill="#EC9A57"/>
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M34 92V52C29 48 21 45 19 37C17 28 26 24 32 30L36 34C34 18 44 8 56 10C70 12 75 26 72 40L70 92Z"/>
+        <path d="M33 76H71"/>
+        <path d="M38 78L44 90M45 78L51 90M52 78L58 90M59 78L65 90M66 80L70 88"/>
+        <path d="M70 84C78 86 84 92 82 96M44 30l1 2M60 60l2 1"/>
+      </g>
+    </symbol>
+    <symbol id="d-avocado" viewBox="0 0 100 110">
+      <circle cx="54" cy="70" r="13" fill="#EC9A57"/>
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 6C66 6 72 24 74 40C89 56 87 100 50 102C13 100 11 56 26 40C28 24 34 6 50 6Z"/>
+        <path d="M50 16C61 16 65 30 65 44C77 56 75 90 50 92C25 90 23 56 35 44C35 30 39 16 50 16Z"/>
+        <circle cx="50" cy="66" r="13"/>
+        <path d="M44 60c2-3 5-4 8-4M36 34l1 2M62 84l2-1"/>
+      </g>
+    </symbol>
+    <symbol id="d-pin" viewBox="0 0 160 60">
+      <g fill="none" stroke="#1D4040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="24" width="28" height="12" rx="6"/>
+        <rect x="32" y="12" width="96" height="36" rx="10"/>
+        <rect x="128" y="24" width="28" height="12" rx="6"/>
+        <path d="M46 20v4M60 36v4M80 18v3M98 34v4M112 22v3"/>
+      </g>
+    </symbol>
+    <symbol id="d-dash" viewBox="0 0 110 70">
+      <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+        <path d="M6 8v8M20 12v8M34 10v9M48 6v9M62 12v7M76 10v9M90 14v7M27 32v9M41 30l1 8M56 34v8M70 32l-1 9M84 36v7M98 30v9M48 54v8M63 56l1 8M78 52v9"/>
+      </g>
+    </symbol>
+    <symbol id="blob-a" viewBox="0 0 200 200">
+      <path fill="currentColor" transform="translate(100 100)" d="M43.5-58.6C55.4-49.5 63.3-35.3 68.1-19.6 72.9-3.9 74.6 13.3 68.4 27.4 62.2 41.5 48.1 52.5 32.6 60.4 17.1 68.3.2 73.1-17.4 71.3-35 69.5-53.3 61.1-63.9 47.2-74.5 33.3-77.4 13.9-74.2-3.8-71-21.5-61.7-37.5-48.6-46.9-35.5-56.3-18.6-59.1-1.4-57.2 15.8-55.3 31.6-67.7 43.5-58.6Z"/>
+    </symbol>
+    <symbol id="blob-b" viewBox="0 0 200 200">
+      <path fill="currentColor" transform="translate(100 100)" d="M38.9-51.5C51.7-44.6 64.1-34.8 70.6-21.2 77.1-7.6 77.7 9.8 71.1 23.9 64.5 38 50.7 48.8 35.9 57.6 21.1 66.4 5.3 73.2-11.6 73.4-28.5 73.6-46.5 67.2-58.5 54.8-70.5 42.4-76.5 24-76.1 6.3-75.7-11.4-68.9-28.4-57.3-36.2-45.7-44-29.3-42.6-15.1-49.4-.9-56.2 11.1-71.2 22.9-72.3 34.7-73.4 26.1-58.4 38.9-51.5Z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C4 10 10 4 20 4c0 10-6 16-15 15Z"/><path d="M5 19l8-8"/></g></symbol>
+    <symbol id="i-bowl" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M8 7c0-2 2-2 2-4M13 7c0-2 2-2 2-4"/></g></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4l3-5M17 19h3l-3-5M9 5l3-2 3 2M12 3l4 7M12 3 8 10M7 19h10"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9Z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.1"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m7.5 12.5 3 3 6-6.5"/></g></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="Date El Gusto Cocina Fresca, ir al inicio">
+      <svg class="brand__blob" viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 0H170C196 4 202 30 194 50C186 72 160 82 128 78C90 74 40 82 0 78Z"/></svg>
+      <span class="brand__name">Date El Gusto</span>
+      <span class="brand__tag">cocina fresca</span>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+        <span class="toggle-label">Menú</span><span class="sr-only"> de navegación</span>
+      </button>
+      <ul class="nav-list" id="nav-menu">
+        <li><a href="#inicio" aria-current="true">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--sm header-cta" href="#menu">Ordenar ahora</a>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+
+  <!-- Hero -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__text">
+      <h1 id="hero-title" class="script">Delicias sanas</h1>
+      <p class="tagline">Comida fresca todos los días</p>
+      <p class="lead">Bowls, ensaladas y licuados que preparamos cada mañana con verduras de fincas de Chimaltenango y Sololá. Sin aditivos, sin prisas y con mucho sabor.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#menu">Ordenar ahora</a>
+        <p class="hero__meta"><svg aria-hidden="true"><use href="#i-clock"/></svg>Abierto los 7 días, desde las 7:00</p>
+      </div>
+    </div>
+    <div class="hero__media">
+      <svg class="deco hero__blob" viewBox="0 0 600 700" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="currentColor" d="M430 -20C570 -40 640 80 622 230C604 390 566 560 440 670C340 760 170 750 110 640C50 530 120 420 172 320C232 200 290 0 430 -20Z"/></svg>
+      <svg class="deco doodle d-hero-egg float" aria-hidden="true" focusable="false"><use href="#d-egg"/></svg>
+      <svg class="deco doodle d-hero-tomato float float--slow" aria-hidden="true" focusable="false"><use href="#d-tomato"/></svg>
+      <svg class="deco doodle d-hero-cupcake" aria-hidden="true" focusable="false"><use href="#d-cupcake"/></svg>
+      <img class="hero__bowl" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=560&q=80&auto=format&fit=crop" width="270" height="270" alt="Bowl de salmón con quinoa, huevo y vegetales visto desde arriba" fetchpriority="high">
+      <img class="hero__photo" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&q=80&auto=format&fit=crop" width="660" height="660" alt="Ensalada de garbanzos, tomate, aguacate y camote en plato blanco, vista desde arriba" fetchpriority="high">
+      <p class="badge pop"><span>Envío</span><span>gratis</span></p>
+    </div>
+    <svg class="deco doodle d-hero-leaf" aria-hidden="true" focusable="false"><use href="#d-leaf"/></svg>
+    <svg class="deco doodle d-hero-mitt float float--slow" aria-hidden="true" focusable="false"><use href="#d-mitt"/></svg>
+    <svg class="deco d-hero-dash" style="color:#1D4040" aria-hidden="true" focusable="false"><use href="#d-dash"/></svg>
+  </section>
+
+  <!-- Free delivery band -->
+  <section class="delivery" aria-labelledby="delivery-title">
+    <div class="delivery__card on-dark reveal">
+      <p class="badge pop"><span>Envío</span><span>gratis</span></p>
+      <div>
+        <h2 id="delivery-title">Tu almuerzo llega sin costo de envío</h2>
+        <p>En pedidos desde Q100 a Ciudad Vieja y Antigua Guatemala. Entregamos en 35 minutos o menos, en empaque compostable.</p>
+      </div>
+      <a class="btn btn--light" href="#menu">Ordenar ahora</a>
+      <svg class="deco delivery__dash" aria-hidden="true" focusable="false"><use href="#d-dash"/></svg>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section menu" id="menu" aria-labelledby="menu-title">
+    <svg class="deco blob menu__blob" aria-hidden="true" focusable="false"><use href="#blob-a"/></svg>
+    <svg class="deco blob blob--teal menu__blob2" style="opacity:.18" aria-hidden="true" focusable="false"><use href="#blob-b"/></svg>
+    <svg class="deco doodle d-menu-citrus float" aria-hidden="true" focusable="false"><use href="#d-citrus"/></svg>
+    <svg class="deco doodle d-menu-avocado float float--slow" aria-hidden="true" focusable="false"><use href="#d-avocado"/></svg>
+    <svg class="deco d-menu-dash" style="color:#1D4040" aria-hidden="true" focusable="false"><use href="#d-dash"/></svg>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="menu-title" class="script">Nuestro menú</h2>
+        <p class="tagline">Hecho al momento, servido con cariño</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar platillos por categoría">
+        <button class="filter" type="button" data-filter="todo" aria-pressed="true">Todo</button>
+        <button class="filter" type="button" data-filter="bowls" aria-pressed="false">Bowls</button>
+        <button class="filter" type="button" data-filter="ensaladas" aria-pressed="false">Ensaladas</button>
+        <button class="filter" type="button" data-filter="desayunos" aria-pressed="false">Desayunos</button>
+        <button class="filter" type="button" data-filter="bebidas" aria-pressed="false">Bebidas</button>
+      </div>
+      <p class="sr-only" id="menu-status" role="status" aria-live="polite"></p>
+      <ul class="menu-grid" role="list">
+        <li class="dish reveal" data-cat="bowls">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Bowl de quinoa con tomates cherry, ejotes y semillas"></div>
+          <h3>Bowl Mediterráneo</h3>
+          <p>Quinoa tricolor, ejotes, tomate cherry, hummus de la casa y aderezo de limón y hierbabuena.</p>
+          <div class="dish__foot"><span class="price">Q72</span><span class="tag">Vegano</span></div>
+        </li>
+        <li class="dish reveal" data-cat="bowls">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Bowl de arroz con vegetales salteados y huevo estrellado"></div>
+          <h3>Bowl Coreano</h3>
+          <p>Arroz integral, zanahoria, pepino, espinaca salteada, kimchi suave y huevo de granja.</p>
+          <div class="dish__foot"><span class="price">Q75</span><span class="tag">Alto en proteína</span></div>
+        </li>
+        <li class="dish reveal" data-cat="ensaladas">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Ensalada verde con fresas, arándanos y queso fresco"></div>
+          <h3>Ensalada de fresa y espinaca</h3>
+          <p>Espinaca baby, fresas de Sumpango, queso fresco, nueces caramelizadas y vinagreta de miel.</p>
+          <div class="dish__foot"><span class="price">Q58</span><span class="tag">Vegetariano</span></div>
+        </li>
+        <li class="dish reveal" data-cat="ensaladas">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Ensalada de pollo a la plancha con aguacate en plato blanco"></div>
+          <h3>Ensalada de pollo y aguacate</h3>
+          <p>Pollo a la plancha, mix de lechugas, aguacate Hass, pepitoria tostada y aderezo de yogur.</p>
+          <div class="dish__foot"><span class="price">Q65</span><span class="tag">Alto en proteína</span></div>
+        </li>
+        <li class="dish reveal" data-cat="desayunos">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Tostadas de pan integral con aguacate y huevo cocido"></div>
+          <h3>Tostada de aguacate y huevo</h3>
+          <p>Pan de masa madre integral, aguacate machacado, huevo tierno, chile en hojuelas y limón.</p>
+          <div class="dish__foot"><span class="price">Q45</span><span class="tag">Vegetariano</span></div>
+        </li>
+        <li class="dish reveal" data-cat="desayunos">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Desayuno con avena, frutos rojos, aguacate y café sobre tabla de madera"></div>
+          <h3>Avena de la abuela</h3>
+          <p>Avena cocida en leche de almendra, banano, frutos rojos, canela y un toque de miel de Sacatepéquez.</p>
+          <div class="dish__foot"><span class="price">Q38</span><span class="tag">Sin gluten</span></div>
+        </li>
+        <li class="dish reveal" data-cat="bebidas">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Licuado rosado de fresa con hojas de menta visto desde arriba"></div>
+          <h3>Licuado de fresa y chía</h3>
+          <p>Fresa, banano, semillas de chía y leche de coco. Sin azúcar añadida.</p>
+          <div class="dish__foot"><span class="price">Q30</span><span class="tag">Vegano</span></div>
+        </li>
+        <li class="dish reveal" data-cat="bebidas">
+          <div class="dish__img-wrap"><img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=480&q=80&auto=format&fit=crop" width="230" height="230" loading="lazy" alt="Vaso de jugo verde con manzana verde y kiwi"></div>
+          <h3>Jugo verde de la casa</h3>
+          <p>Espinaca, apio, pepino, manzana verde, jengibre y limón, prensado en frío cada mañana.</p>
+          <div class="dish__foot"><span class="price">Q28</span><span class="tag">Vegano</span></div>
+        </li>
+      </ul>
+      <div class="menu-cta reveal">
+        <a class="btn btn--primary" href="tel:+50245393659">Ordenar ahora: 4539 3659</a>
+        <a class="link-arrow" href="#contacto">O reserva una mesa<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="nosotros" aria-labelledby="about-title">
+    <svg class="deco doodle d-about-pin" aria-hidden="true" focusable="false"><use href="#d-pin"/></svg>
+    <svg class="deco doodle d-about-leaf float" aria-hidden="true" focusable="false"><use href="#d-leaf"/></svg>
+    <svg class="deco d-about-dash" style="color:#1D4040" aria-hidden="true" focusable="false"><use href="#d-dash"/></svg>
+    <div class="container split">
+      <div class="split__media reveal">
+        <svg class="blob blob--teal" aria-hidden="true" focusable="false"><use href="#blob-b"/></svg>
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900&q=80&auto=format&fit=crop" width="560" height="700" loading="lazy" alt="Dos cocineros sonrientes preparando comida fresca en una cocina luminosa">
+      </div>
+      <div class="reveal">
+        <div class="section-head">
+          <h2 id="about-title" class="script">Nuestra historia</h2>
+          <p class="tagline">De la finca a tu mesa, cada mañana</p>
+        </div>
+        <div class="prose">
+          <p>Date El Gusto nació en 2019 en una esquina de Ciudad Vieja, con una idea sencilla: comer sano no tiene por qué ser aburrido ni caro.</p>
+          <p>Cada día a las 5:30 recibimos verduras de productores de Chimaltenango y Sololá, horneamos nuestro pan y preparamos los aderezos desde cero.</p>
+        </div>
+        <ul class="features" role="list">
+          <li class="feature"><span class="feature__icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span><div><strong>Producto local</strong>Trabajamos con 14 familias agricultoras de Guatemala.</div></li>
+          <li class="feature"><span class="feature__icon"><svg aria-hidden="true"><use href="#i-bowl"/></svg></span><div><strong>Todo hecho en casa</strong>Aderezos, panes y granola, sin conservantes.</div></li>
+          <li class="feature"><span class="feature__icon"><svg aria-hidden="true"><use href="#i-recycle"/></svg></span><div><strong>Empaques compostables</strong>Y descuento de Q5 si traes tu propio recipiente.</div></li>
+        </ul>
+        <p style="margin-top:var(--s3)"><a class="link-arrow" href="#menu">Ver el menú del día<svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section products" id="productos" aria-labelledby="products-title">
+    <svg class="deco blob products__blob" style="opacity:.55" aria-hidden="true" focusable="false"><use href="#blob-a"/></svg>
+    <svg class="deco doodle d-prod-egg float" aria-hidden="true" focusable="false"><use href="#d-egg"/></svg>
+    <svg class="deco doodle d-prod-mitt float float--slow" aria-hidden="true" focusable="false"><use href="#d-mitt"/></svg>
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <h2 id="products-title" class="script">Para llevar</h2>
+        <p class="tagline">Lo mejor de Date El Gusto en tu refri</p>
+      </div>
+      <ul class="product-grid" role="list">
+        <li class="product reveal">
+          <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=640&q=80&auto=format&fit=crop" width="320" height="240" loading="lazy" alt="Ensalada en frasco de vidrio con capas de vegetales y granos">
+          <div class="product__body"><h3>Ensalada en frasco</h3><p>Capas de granos, vegetales y aderezo aparte. Dura 3 días refrigerada.</p><span class="price">Q48</span></div>
+        </li>
+        <li class="product reveal">
+          <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=640&q=80&auto=format&fit=crop" width="320" height="240" loading="lazy" alt="Botellas de jugos naturales de colores junto a frutas frescas">
+          <div class="product__body"><h3>Pack de jugos prensados</h3><p>Tres botellas de 350 ml: verde, betabel y naranja con zanahoria.</p><span class="price">Q75</span></div>
+        </li>
+        <li class="product reveal">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=640&q=80&auto=format&fit=crop" width="320" height="240" loading="lazy" alt="Vasitos de yogur natural con fresas frescas">
+          <div class="product__body"><h3>Parfait de yogur y fresa</h3><p>Yogur griego, granola de la casa y fresas. Ideal para la refacción.</p><span class="price">Q26</span></div>
+        </li>
+        <li class="product reveal">
+          <img src="https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=640&q=80&auto=format&fit=crop" width="320" height="240" loading="lazy" alt="Vaso de licuado de mango con trozos de mango fresco">
+          <div class="product__body"><h3>Licuado de mango y maracuyá</h3><p>Botella de 500 ml con fruta de temporada y yogur natural.</p><span class="price">Q32</span></div>
+        </li>
+      </ul>
+      <div class="menu-cta reveal">
+        <a class="btn btn--secondary" href="#contacto">Encarga para mañana</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery" id="galeria" aria-labelledby="gallery-title">
+    <svg class="deco blob blob--teal gallery__blob" style="opacity:.22" aria-hidden="true" focusable="false"><use href="#blob-a"/></svg>
+    <svg class="deco doodle d-gal-tomato float" aria-hidden="true" focusable="false"><use href="#d-tomato"/></svg>
+    <svg class="deco d-gal-dash" style="color:#1D4040" aria-hidden="true" focusable="false"><use href="#d-dash"/></svg>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="gallery-title" class="script">Galería</h2>
+        <p class="tagline">Un vistazo a nuestra cocina y nuestro local</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <figure class="g-tall"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700&q=80&auto=format&fit=crop" width="350" height="460" loading="lazy" alt="Interior del café con mesas blancas, plantas y luz natural"></figure>
+        <figure class="g-wide"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" width="720" height="220" loading="lazy" alt="Mesa con bowls de huevo, aguacate, kale y rábano vistos desde arriba"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&q=80&auto=format&fit=crop" width="350" height="220" loading="lazy" alt="Barra de ingredientes frescos: brócoli, chiles, frijoles y tomates"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1600335895229-6e75511892c8?w=600&q=80&auto=format&fit=crop" width="350" height="220" loading="lazy" alt="Varios bowls de ensalada con aguacate y repollo morado"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?w=900&q=80&auto=format&fit=crop" width="720" height="220" loading="lazy" alt="Composición de vegetales verdes, limón y hojas sobre fondo verde claro"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80&auto=format&fit=crop" width="350" height="220" loading="lazy" alt="Mesa junto a la ventana con prensa francesa y tazas de café"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" aria-labelledby="test-title">
+    <svg class="deco blob testimonials__blob" aria-hidden="true" focusable="false"><use href="#blob-b"/></svg>
+    <svg class="deco doodle d-test-cupcake float" aria-hidden="true" focusable="false"><use href="#d-cupcake"/></svg>
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <h2 id="test-title" class="script">Lo que dicen</h2>
+        <p class="tagline">Clientes que vuelven cada semana</p>
+      </div>
+      <div class="carousel reveal" role="region" aria-roledescription="carrusel" aria-label="Opiniones de clientes">
+        <ul class="carousel__track" id="test-track" role="list" tabindex="0" aria-label="Opiniones, usa las flechas para desplazarte">
+          <li class="quote">
+            <svg class="quote__mark" viewBox="0 0 40 32" aria-hidden="true"><path fill="currentColor" d="M0 32V18C0 8 6 1 16 0l2 5c-6 2-9 6-9 11h7v16Zm22 0V18C22 8 28 1 38 0l2 5c-6 2-9 6-9 11h7v16Z"/></svg>
+            <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote><p>Pido el Bowl Mediterráneo para la oficina tres veces por semana. Llega rápido, bien empacado y siempre fresco.</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">MC</span><span><cite>María José Castillo</cite><small>Ciudad Vieja, cliente desde 2021</small></span></figcaption>
+          </li>
+          <li class="quote">
+            <svg class="quote__mark" viewBox="0 0 40 32" aria-hidden="true"><path fill="currentColor" d="M0 32V18C0 8 6 1 16 0l2 5c-6 2-9 6-9 11h7v16Zm22 0V18C22 8 28 1 38 0l2 5c-6 2-9 6-9 11h7v16Z"/></svg>
+            <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote><p>Por fin un lugar donde comer sano no sabe a castigo. La tostada de aguacate con huevo es mi desayuno de los sábados.</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">AP</span><span><cite>Andrés Pérez</cite><small>Antigua Guatemala</small></span></figcaption>
+          </li>
+          <li class="quote">
+            <svg class="quote__mark" viewBox="0 0 40 32" aria-hidden="true"><path fill="currentColor" d="M0 32V18C0 8 6 1 16 0l2 5c-6 2-9 6-9 11h7v16Zm22 0V18C22 8 28 1 38 0l2 5c-6 2-9 6-9 11h7v16Z"/></svg>
+            <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote><p>El local es luminoso y tranquilo, perfecto para trabajar un rato. El jugo verde tiene el punto justo de jengibre.</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">LM</span><span><cite>Lucía Morales</cite><small>Diseñadora, Ciudad Vieja</small></span></figcaption>
+          </li>
+          <li class="quote">
+            <svg class="quote__mark" viewBox="0 0 40 32" aria-hidden="true"><path fill="currentColor" d="M0 32V18C0 8 6 1 16 0l2 5c-6 2-9 6-9 11h7v16Zm22 0V18C22 8 28 1 38 0l2 5c-6 2-9 6-9 11h7v16Z"/></svg>
+            <div class="stars" role="img" aria-label="4 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true" style="opacity:.25"><use href="#i-star"/></svg></div>
+            <blockquote><p>Hicimos el almuerzo del equipo con ellos y todos quedaron felices. Excelente opción para grupos y dietas veganas.</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">DR</span><span><cite>Diego Ramírez</cite><small>Gerente de oficina, Antigua Guatemala</small></span></figcaption>
+          </li>
+          <li class="quote">
+            <svg class="quote__mark" viewBox="0 0 40 32" aria-hidden="true"><path fill="currentColor" d="M0 32V18C0 8 6 1 16 0l2 5c-6 2-9 6-9 11h7v16Zm22 0V18C22 8 28 1 38 0l2 5c-6 2-9 6-9 11h7v16Z"/></svg>
+            <div class="stars" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote><p>Me encanta que puedo traer mi propio recipiente. Las ensaladas en frasco me salvan la semana.</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">SH</span><span><cite>Sofía Herrera</cite><small>San Miguel Escobar</small></span></figcaption>
+          </li>
+        </ul>
+        <div class="carousel__controls">
+          <button class="carousel__btn" type="button" data-dir="-1" aria-controls="test-track" aria-label="Opinión anterior"><svg aria-hidden="true" style="rotate:180deg"><use href="#i-arrow"/></svg></button>
+          <button class="carousel__btn" type="button" data-dir="1" aria-controls="test-track" aria-label="Siguiente opinión"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservations + contact -->
+  <section class="section contact" id="contacto" aria-labelledby="contact-title">
+    <svg class="deco blob contact__blob" style="opacity:.6" aria-hidden="true" focusable="false"><use href="#blob-a"/></svg>
+    <svg class="deco doodle d-contact-avocado float" aria-hidden="true" focusable="false"><use href="#d-avocado"/></svg>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="contact-title" class="script">Reserva tu mesa</h2>
+        <p class="tagline">O visítanos: siempre hay lugar para uno más</p>
+      </div>
+      <div class="contact-grid">
+        <div class="form-card reveal">
+          <h3>Reservación</h3>
+          <p>Te confirmamos por teléfono en menos de una hora.</p>
+          <form id="reserva" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="f-nombre">Nombre</label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" aria-required="true" aria-describedby="e-nombre">
+                <p class="error" id="e-nombre" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-telefono">Teléfono</label>
+                <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" aria-required="true" aria-describedby="h-telefono e-telefono">
+                <span class="hint" id="h-telefono">8 dígitos, por ejemplo 5555 1234</span>
+                <p class="error" id="e-telefono" aria-live="polite"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-correo">Correo electrónico</label>
+                <input id="f-correo" name="correo" type="email" autocomplete="email" aria-required="true" aria-describedby="e-correo">
+                <p class="error" id="e-correo" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-fecha">Fecha</label>
+                <input id="f-fecha" name="fecha" type="date" aria-required="true" aria-describedby="e-fecha">
+                <p class="error" id="e-fecha" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-hora">Hora</label>
+                <select id="f-hora" name="hora" aria-required="true" aria-describedby="e-hora">
+                  <option value="">Elige una hora</option>
+                  <option>07:30</option><option>08:30</option><option>09:30</option><option>10:30</option><option>11:30</option>
+                  <option>12:30</option><option>13:30</option><option>14:30</option><option>15:30</option><option>16:30</option>
+                  <option>17:30</option><option>18:30</option><option>19:00</option>
+                </select>
+                <p class="error" id="e-hora" aria-live="polite"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-personas">Número de personas</label>
+                <select id="f-personas" name="personas" aria-required="true" aria-describedby="e-personas">
+                  <option value="">Elige cuántos vienen</option>
+                  <option value="1">1 persona</option><option value="2">2 personas</option><option value="3">3 personas</option>
+                  <option value="4">4 personas</option><option value="5">5 personas</option><option value="6">6 personas</option>
+                  <option value="8">7 u 8 personas</option><option value="10">9 o 10 personas</option>
+                </select>
+                <p class="error" id="e-personas" aria-live="polite"></p>
+              </div>
+              <div class="field field--full">
+                <label for="f-notas">Comentarios <span class="opt">(opcional)</span></label>
+                <textarea id="f-notas" name="notas" maxlength="300" placeholder="Alergias, celebraciones, silla para bebé…"></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Reservar mesa</button>
+            </div>
+          </form>
+          <div class="form-success" id="form-success" role="status" tabindex="-1" hidden>
+            <svg aria-hidden="true"><use href="#i-check"/></svg>
+            <div><strong>¡Listo, tu mesa está apartada!</strong><span id="success-detail">Te llamaremos para confirmar.</span></div>
+          </div>
+        </div>
+
+        <div class="info reveal">
+          <div class="info-item">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <div><h3>Dirección</h3><p>Ciudad Vieja<br>Sacatepéquez, Guatemala</p></div>
+          </div>
+          <div class="info-item">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <div><h3>Horario</h3>
+              <dl class="hours">
+                <dt>Lunes a viernes</dt><dd>7:00 – 20:00</dd>
+                <dt>Sábado</dt><dd>8:00 – 20:00</dd>
+                <dt>Domingo</dt><dd>8:00 – 15:00</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <div><h3>Teléfono y WhatsApp</h3><a href="tel:+50245393659">+502 4539 3659</a></div>
+          </div>
+          <div class="map">
+            <svg viewBox="0 0 480 260" role="img" aria-label="Mapa ilustrado: Date El Gusto está en Ciudad Vieja, Sacatepéquez">
+              <rect width="480" height="260" fill="#EFE8D2"/>
+              <path d="M0 180C90 150 150 210 250 186S400 120 480 140V170C400 152 340 210 250 216S90 182 0 210Z" fill="#2F6F68" opacity=".25"/>
+              <g stroke="#FFFCF4" stroke-width="16" fill="none" stroke-linecap="round">
+                <path d="M-10 70H490M-10 130H490M120 -10V270M300 -10V270M40 -10 200 270"/>
+              </g>
+              <g stroke="#FFFCF4" stroke-width="7" fill="none"><path d="M-10 40H490M210 -10V270M390 -10V270M-10 230H490"/></g>
+              <rect x="320" y="150" width="60" height="40" rx="8" fill="#F2C29A"/>
+              <rect x="140" y="88" width="50" height="30" rx="8" fill="#F2C29A"/>
+              <g font-family="Quicksand, sans-serif" font-size="12" font-weight="700" fill="#1D4040">
+                <text x="130" y="60">Ciudad Vieja</text>
+                <text x="314" y="124">Sacatepéquez</text>
+              </g>
+              <path d="M300 70c-14 0-24 10-24 23 0 18 24 39 24 39s24-21 24-39c0-13-10-23-24-23Z" fill="#1D4040" transform="translate(0 -38)"/>
+              <circle cx="300" cy="54" r="8" fill="#EC9A57"/>
+            </svg>
+            <a class="btn btn--primary btn--sm map__link" href="https://www.google.com/maps/search/?api=1&amp;query=Ciudad+Vieja+Sacatep%C3%A9quez+Guatemala" target="_blank" rel="noopener">Abrir en Google Maps<span class="sr-only"> (se abre en otra pestaña)</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section final" aria-labelledby="final-title">
+    <svg class="deco doodle d-final-citrus float" aria-hidden="true" focusable="false"><use href="#d-citrus"/></svg>
+    <svg class="deco d-final-dash" style="color:#1D4040" aria-hidden="true" focusable="false"><use href="#d-dash"/></svg>
+    <div class="container split">
+      <div class="split__media reveal">
+        <svg class="blob" aria-hidden="true" focusable="false"><use href="#blob-a"/></svg>
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=800&q=80&auto=format&fit=crop" width="500" height="500" loading="lazy" alt="Bowl de pasta con huevo, verduras y tenedor dorado visto desde arriba">
+        <p class="badge badge--teal pop"><span>Envío</span><span>gratis</span></p>
+      </div>
+      <div class="reveal">
+        <h2 id="final-title" class="script">¿Se te antojó?</h2>
+        <p class="tagline">Tu bowl favorito, a un clic</p>
+        <p class="lead">Ordena antes de las 11:30 y recibe tu almuerzo justo a tiempo. Envío gratis desde Q100.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#menu">Ordenar ahora</a>
+          <a class="link-arrow" href="tel:+50245393659">Llamar al 4539 3659<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-dark">
+  <svg class="deco blob footer__blob" aria-hidden="true" focusable="false"><use href="#blob-b"/></svg>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <p class="brand__name">Date El Gusto</p>
+      <p>Cocina fresca y sana en el corazón de Ciudad Vieja. Bowls, ensaladas y licuados hechos cada día.</p>
+      <div class="social">
+        <a href="#" aria-label="Date El Gusto en Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></g></svg></a>
+        <a href="#" aria-label="Date El Gusto en Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8V6.5c0-.8.5-1 1-1h2V2h-3c-3 0-4 2-4 4.5V8H8v3.5h2V22h4V11.5h2.7L17 8Z"/></svg></a>
+        <a href="#" aria-label="Date El Gusto en TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 2h-3.3v13.2a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9.2a6.2 6.2 0 1 0 5.2 6.1V8.7a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.8Z"/></svg></a>
+      </div>
+    </div>
+    <nav aria-label="Pie de página">
+      <h2>Navegación</h2>
+      <ul class="footer-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Visítanos</h2>
+      <address>Ciudad Vieja<br>Sacatepéquez, Guatemala<br><a href="tel:+50245393659">+502 4539 3659</a><br><a href="mailto:hola@dateelgusto.com.gt">hola@dateelgusto.com.gt</a></address>
+    </div>
+    <div>
+      <h2>Horario</h2>
+      <dl class="hours">
+        <dt>Lun – Vie</dt><dd>7:00 – 20:00</dd>
+        <dt>Sábado</dt><dd>8:00 – 20:00</dd>
+        <dt>Domingo</dt><dd>8:00 – 15:00</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Date El Gusto · Cocina Fresca. Todos los derechos reservados.</p>
+    <p>Hecho con verduras de Guatemala.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Mobile nav */
+  var toggle = document.querySelector('.nav-toggle');
+  var navList = document.getElementById('nav-menu');
+  function setNav(open) {
+    toggle.setAttribute('aria-expanded', String(open));
+    navList.classList.toggle('is-open', open);
+  }
+  toggle.addEventListener('click', function () { setNav(toggle.getAttribute('aria-expanded') !== 'true'); });
+  navList.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { setNav(false); toggle.focus(); }
+  });
+  window.matchMedia('(min-width: 900px)').addEventListener('change', function () { setNav(false); });
+
+  /* Header background once scrolled */
+  var header = document.querySelector('.site-header');
+  function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Active nav item follows the section in view */
+  var navLinks = Array.prototype.slice.call(navList.querySelectorAll('a'));
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + entry.target.id) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  navLinks.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) spy.observe(s); });
+
+  /* Scroll reveal + badge pop */
+  var revealEls = document.querySelectorAll('.reveal, .pop');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  /* Menu filter */
+  var filters = document.querySelectorAll('.filter');
+  var dishes = document.querySelectorAll('.dish');
+  var status = document.getElementById('menu-status');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var cat = btn.dataset.filter, shown = 0;
+      filters.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      dishes.forEach(function (d) {
+        var show = cat === 'todo' || d.dataset.cat === cat;
+        d.hidden = !show;
+        if (show) { shown++; d.classList.add('is-visible'); }
+      });
+      status.textContent = cat === 'todo' ? 'Mostrando los ' + shown + ' platillos' : 'Mostrando ' + shown + ' platillos de ' + btn.textContent.toLowerCase();
+    });
+  });
+
+  /* Testimonials carousel */
+  var track = document.getElementById('test-track');
+  var prev = document.querySelector('.carousel__btn[data-dir="-1"]');
+  var next = document.querySelector('.carousel__btn[data-dir="1"]');
+  function step() { var card = track.querySelector('.quote'); return card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0); }
+  function updateButtons() {
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+  }
+  [prev, next].forEach(function (b) {
+    b.addEventListener('click', function () { track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+  });
+  track.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
+
+  /* Reservation form */
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function todayISO(d) { d = d || new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+
+  // Returns a Spanish error message, or '' when valid. `today` is YYYY-MM-DD.
+  function validateField(name, value, data, today) {
+    value = (value || '').trim();
+    switch (name) {
+      case 'nombre':
+        if (!value) return 'Escribe tu nombre.';
+        if (value.length < 2) return 'El nombre debe tener al menos 2 letras.';
+        return '';
+      case 'telefono':
+        var digits = value.replace(/[\s-]/g, '').replace(/^\+?502/, '');
+        if (!value) return 'Escribe un teléfono para confirmarte.';
+        if (!/^\d{8}$/.test(digits)) return 'El teléfono debe tener 8 dígitos, por ejemplo 5555 1234.';
+        return '';
+      case 'correo':
+        if (!value) return 'Escribe tu correo electrónico.';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) return 'Revisa tu correo, parece incompleto (ejemplo: ana@correo.com).';
+        return '';
+      case 'fecha':
+        if (!value) return 'Elige la fecha de tu visita.';
+        if (value < today) return 'Elige una fecha a partir de hoy.';
+        return '';
+      case 'hora':
+        if (!value) return 'Elige una hora.';
+        // Sundays close at 15:00
+        if (data.fecha && new Date(data.fecha + 'T12:00').getDay() === 0 && value >= '14:30') return 'Los domingos cerramos a las 15:00. Elige una hora hasta las 13:30.';
+        return '';
+      case 'personas':
+        return value ? '' : 'Indica cuántas personas vienen.';
+    }
+    return '';
+  }
+
+  // Self-check of the validation rules (silent when they pass).
+  console.assert(validateField('telefono', '5555 1234', {}, '2026-01-01') === '', 'tel ok');
+  console.assert(validateField('telefono', '+502 5555-1234', {}, '2026-01-01') === '', 'tel prefix ok');
+  console.assert(validateField('telefono', '555', {}, '2026-01-01') !== '', 'tel short');
+  console.assert(validateField('correo', 'ana@correo', {}, '2026-01-01') !== '', 'mail tld');
+  console.assert(validateField('fecha', '2025-12-31', {}, '2026-01-01') !== '', 'past date');
+  console.assert(validateField('hora', '15:30', { fecha: '2026-10-25' }, '2026-01-01') !== '', 'sunday late');
+  console.assert(validateField('hora', '15:30', { fecha: '2026-10-24' }, '2026-01-01') === '', 'saturday late ok');
+
+  var form = document.getElementById('reserva');
+  var success = document.getElementById('form-success');
+  var fieldNames = ['nombre', 'telefono', 'correo', 'fecha', 'hora', 'personas'];
+  var alertIcon = '<svg aria-hidden="true"><use href="#i-alert"/></svg>';
+  var submitted = false;
+  form.elements.fecha.min = todayISO();
+
+  function formData() { var d = {}; fieldNames.forEach(function (n) { d[n] = form.elements[n].value; }); return d; }
+  function check(name) {
+    var input = form.elements[name];
+    var msg = validateField(name, input.value, formData(), todayISO());
+    var out = document.getElementById('e-' + name);
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    out.innerHTML = msg ? alertIcon + '<span>' + msg + '</span>' : '';
+    return !msg;
+  }
+  fieldNames.forEach(function (n) {
+    var input = form.elements[n];
+    input.addEventListener('blur', function () { if (submitted || input.value) check(n); });
+    input.addEventListener('change', function () { if (submitted) { check(n); if (n === 'fecha') check('hora'); } });
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    submitted = true;
+    var firstInvalid = null;
+    fieldNames.forEach(function (n) { if (!check(n) && !firstInvalid) firstInvalid = form.elements[n]; });
+    if (firstInvalid) { success.hidden = true; firstInvalid.focus(); return; }
+    var d = formData();
+    var fecha = new Date(d.fecha + 'T12:00').toLocaleDateString('es-GT', { weekday: 'long', day: 'numeric', month: 'long' });
+    document.getElementById('success-detail').textContent =
+      ' Mesa para ' + form.elements.personas.selectedOptions[0].text + ' el ' + fecha + ' a las ' + d.hora + '. Te llamaremos al ' + d.telefono.trim() + ' para confirmar.';
+    form.reset();
+    submitted = false;
+    fieldNames.forEach(function (n) { form.elements[n].removeAttribute('aria-invalid'); });
+    success.hidden = false;
+    success.focus();
+  });
+})();
+</script>
+</body>
+</html>
